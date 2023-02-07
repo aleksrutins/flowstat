@@ -1,6 +1,8 @@
 from textual.app import App, ComposeResult
 from textual.widgets import Header, Footer
 
+from flowstat.display import StatsDisplay
+
 class FlowstatApp(App):
     
     CSS_PATH = "app.css"
@@ -11,6 +13,7 @@ class FlowstatApp(App):
 
     def compose(self) -> ComposeResult:
         yield Header()
+        yield StatsDisplay()
         yield Footer()
     
     def action_toggle_dark(self) -> None:

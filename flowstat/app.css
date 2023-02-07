@@ -1,7 +1,15 @@
 StatsDisplay {
     padding: 1;
+    margin: 1;
     layout: horizontal;
     content-align: center middle;
+    background: $boost;
+    min-width: 50;
+}
+
+StatsDisplay Label.completed { 
+    color: gray;
+    padding-left: 1;
 }
 
 StatsDisplay.processing Label.percentage {
