@@ -1,0 +1,13 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "flowstat"
+version = "0.0.1"
+dependencies = [
+    "tensorflow",
+    "numpy >= 1.22",
+    "pillow >= 9",
+    "textual >= 0.10"
+]

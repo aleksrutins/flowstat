@@ -1,0 +1,13 @@
+StatsDisplay {
+    padding: 1;
+    layout: horizontal;
+    content-align: center middle;
+}
+
+StatsDisplay.processing Label.percentage {
+    color: gray;
+}
+
+StatsDisplay.viable Label.percentage {
+
+}
