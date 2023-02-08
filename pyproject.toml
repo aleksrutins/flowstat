@@ -9,6 +9,5 @@ dependencies = [
     "tensorflow; sys_platform == 'linux' or platform_system == 'Windows'",
     "tensorflow_macos; sys_platform == 'darwin'",
     "numpy >= 1.22",
-    "pillow >= 9",
-    "textual >= 0.10"
+    "pillow >= 9"
 ]

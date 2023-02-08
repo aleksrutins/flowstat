@@ -1,26 +1,12 @@
-from textual.app import App, ComposeResult
-from textual.widgets import Header, Footer
-from textual.reactive import reactive
+import sys
+import tensorflow as tf
 
-from flowstat.display import StatsDisplay
-
-class FlowstatApp(App):
+def main():
+    if len(sys.argv) < 2:
+        print("Usage: flowstat <model path>")
+        exit(1)
     
-    CSS_PATH = "app.css"
-    BINDINGS = [
-        ('d', 'toggle_dark', 'Toggle dark mode'),
-        ('q', 'quit', 'Quit')
-    ]
-
-    started = reactive(False)
-
-    def compose(self) -> ComposeResult:
-        yield Header()
-        # yield StatsDisplay()
-        yield Footer()
+    model_path = sys.argv[1]
+    interpreter = tf.lite.Interpreter(model_path)
+    signature = interpreter.get_signature_runner()
     
-    def action_toggle_dark(self) -> None:
-        self.dark = not self.dark
-    
-    def action_quit(self) -> None:
-        exit(0)

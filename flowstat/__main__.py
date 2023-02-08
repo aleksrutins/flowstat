@@ -1,6 +1,4 @@
-from flowstat import FlowstatApp
-
+from . import main
 
 if __name__ == "__main__":
-    app = FlowstatApp()
-    app.run()
+    main()
